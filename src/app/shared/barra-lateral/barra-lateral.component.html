@@ -1,0 +1,18 @@
+<!-- SideBar-->
+<div class="bg-dark border-right p-3 position-" id="sidebar">
+    <h3 class="text-light">
+        Gifs App
+    </h3>
+    <hr class="text-light">
+    <span class="text-light ">Historial de Búsqueda</span>
+    <div class="list-group list-reset">
+        <a href="#"
+           class="list-group-item list-group-item-action"
+           *ngFor="let item of historial"
+            (click)="buscar(item)" > 
+           {{ item | titlecase }}
+        </a>
+    </div>
+    <button (click)="borrarHistorial()" class="mt-3 btn-success"> Limpiar historial</button>
+</div>
+<!-- End SideBar-->
